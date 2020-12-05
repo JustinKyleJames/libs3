@@ -402,9 +402,9 @@ static S3Status compose_amz_headers(const RequestParams *params,
                            (unsigned long long) (params->startByte + params->byteCount - 1) );
         }
         // And the x-amz-metadata-directive header
-        if (properties) {
-            headers_append(1, "%s", "x-amz-metadata-directive: REPLACE");
-        }
+        //if (properties) {
+        //    headers_append(1, "%s", "x-amz-metadata-directive: REPLACE");
+        //}
     }
 
     // Add the x-amz-security-token header if necessary
