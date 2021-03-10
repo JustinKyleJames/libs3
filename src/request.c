@@ -422,7 +422,7 @@ static S3Status compose_amz_headers(const RequestParams *params,
             // Add the x-amz-metadata-directive header
             // Only for CopyObject, not UploadPartCopy (above)
             if (properties) {
-                append_amz_header(values, 0, "x-amz-metadata-directive", "REPLACE");
+                append_amz_header(values, 0, "x-amz-metadata-directive", "COPY");
             }
         }
     }
