@@ -69,7 +69,8 @@
 #define MAX_CANONICALIZED_RESOURCE_SIZE \
     (1 + 255 + 1 + MAX_URLENCODED_KEY_SIZE + (sizeof("?torrent") - 1) + 1)
 
-#define MAX_ACCESS_KEY_ID_LENGTH 32
+// fujifilm has 64 byte keys.  Just for additional safety making this 128 bytes.
+#define MAX_ACCESS_KEY_ID_LENGTH 128
 
 // Maximum length of a credential string
 // <access key>/<yyyymmdd>/<region>/s3/aws4_request
